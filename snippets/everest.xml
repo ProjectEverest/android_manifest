@@ -15,6 +15,10 @@
            fetch="https://gitea.com/ProjectEverest/"
            revision="udc" />
 
+  <remote  name="HorizonDroidLab"
+           fetch="https://github.com/HorizonDroidLab"
+           revision="refs/heads/14" />
+
   <!--ART-->
   <project path="art" name="android_art" groups="pdk" remote="everest" />
 
@@ -89,6 +93,9 @@
     <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8550/audio/Android.mk" />
     <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8550/Android.bp" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8550/Android.mk" />
+    <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm6225/audio/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm6225/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm6225/Android.mk" />
   </project>
 
   <!-- Packages -->

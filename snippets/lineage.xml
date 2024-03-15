@@ -11,6 +11,7 @@
   <project path="device/qcom/sepolicy_vndr/legacy-um" name="android_device_qcom_sepolicy_vndr" groups="qcom,lahaina" revision="lineage-21.0-legacy-um" remote="lineage" />
   <project path="device/qcom/sepolicy_vndr/sm8450" name="android_device_qcom_sepolicy_vndr" groups="qcom,waipio-vendor" revision="lineage-21.0-caf-sm8450" remote="lineage" />
   <project path="device/qcom/sepolicy_vndr/sm8550" name="android_device_qcom_sepolicy_vndr" groups="qcom,kailua-vendor" revision="lineage-21.0-caf-sm8550" remote="lineage" />
+  <project path="device/qcom/sepolicy_vndr/sm6225" name="device_qcom_sepolicy_vndr" revision="14-caf-sm6225" remote="HorizonDroidLab" />
 
   <!-- Development -->
   <project path="development" name="android_development" groups="developers,pdk-cw-fs,pdk-fs" remote="lineage" />
@@ -58,6 +59,13 @@
   <project path="hardware/qcom/media" name="android_hardware_qcom_media" groups="qcom,pdk-qcom" remote="lineage" />
   <project path="hardware/qcom-caf/bootctrl" name="android_hardware_qcom_bootctrl" groups="qcom,kailua-vendor" revision="lineage-21.0-caf" remote="lineage" />
   <project path="hardware/qcom-caf/bt" name="android_hardware_qcom_bt" groups="qcom,legacy-qcom" revision="lineage-21.0-caf" remote="lineage" />
+  <project path="hardware/qcom-caf/sm6225/audio/agm" name="vendor_qcom_opensource_agm" remote="HorizonDroidLab" revision="14-caf-sm6225" />
+  <project path="hardware/qcom-caf/sm6225/audio/pal" name="vendor_qcom_opensource_arpal-lx" remote="HorizonDroidLab" revision="14-caf-sm6225" />
+  <project path="hardware/qcom-caf/sm6225/audio/primary-hal" name="hardware_qcom_audio" remote="HorizonDroidLab" revision="14-caf-sm6225" />
+  <project path="hardware/qcom-caf/sm6225/data-ipa-cfg-mgr" name="vendor_qcom_opensource_data-ipa-cfg-mgr" remote="HorizonDroidLab" revision="14-caf-sm6225" />
+  <project path="hardware/qcom-caf/sm6225/dataipa" name="vendor_qcom_opensource_dataipa" remote="HorizonDroidLab" revision="14-caf-sm6225" />
+  <project path="hardware/qcom-caf/sm6225/display" name="hardware_qcom_display" remote="HorizonDroidLab" revision="14-caf-sm6225" />
+  <project path="hardware/qcom-caf/sm6225/media" name="hardware_qcom_media" remote="HorizonDroidLab" revision="14-caf-sm6225" />
   <project path="hardware/qcom-caf/msm8953/audio" name="android_hardware_qcom_audio" groups="qcom,msm8953" revision="lineage-21.0-caf-msm8953" remote="lineage" />
   <project path="hardware/qcom-caf/msm8953/display" name="android_hardware_qcom_display" groups="qcom" revision="lineage-21.0-caf-msm8953" remote="lineage" />
   <project path="hardware/qcom-caf/msm8953/media" name="android_hardware_qcom_media" groups="qcom,msm8953" revision="lineage-21.0-caf-msm8953" remote="lineage" />
