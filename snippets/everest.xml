@@ -40,10 +40,22 @@
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
+  <!-- Development -->
+  <project path="development" name="android_development" groups="developers,pdk-cw-fs,pdk-fs" remote="everest" />
+
   <!-- Device -->
   <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="everest" />
   <project path="device/everest/sepolicy" name="android_device_everest_sepolicy" remote="everest" />
   <project path="device/qcom/sepolicy-legacy-um" name="android_device_qcom_sepolicy-legacy-um" groups="qcom,sdm660" remote="everest" />
+
+  <!-- External -->
+  <project path="external/avb" name="android_external_avb" groups="pdk" remote="everest" /> 
+  <project path="external/cronet" name="android_external_cronet" groups="pdk" remote="everest" />
+  <project path="external/dtc" name="android_external_dtc" groups="pdk" remote="everest" />
+  <project path="external/e2fsprogs" name="android_external_e2fsprogs" groups="pdk" remote="everest" />
+  <project path="external/libcxx" name="android_external_libcxx" groups="pdk" remote="everest" />
+  <project path="external/libnl" name="android_external_libnl" groups="pdk" remote="everest" />
+  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" groups="pdk" remote="everest" />
 
   <!-- Fading Layout -->
   <project path="external/FadingEdgeLayout" name="android_external_FadingEdgeLayout" remote="everest" />
@@ -56,6 +68,7 @@
   <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" groups="pdk" remote="everest" />
 
   <!-- Hardware -->
+  <project path="hardware/qcom-caf/wlan" name="android_hardware_qcom_wlan" groups="qcom,kailua-vendor" remote="everest" />
   <project path="hardware/interfaces" name="android_hardware_interfaces" remote="everest" />
   <project path="hardware/everest/interfaces" name="android_hardware_everest_interfaces" remote="everest" />
   <project path="hardware/libhardware" name="android_hardware_libhardware" groups="pdk" remote="everest" />
@@ -94,6 +107,9 @@
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8550/Android.mk" />
   </project>
 
+  <!-- Kernel -->
+  <project path="kernel/configs" name="android_kernel_configs" groups="vts,pdk" remote="everest" />
+
   <!-- Packages -->
   <project path="packages/apps/BaseCamp" name="android_packages_apps_BaseCamp" remote="everest" />
   <project path="packages/apps/EverestWallpaperStub" name="android_packages_apps_EverestWallpaperStub" remote="everest" />
@@ -113,6 +129,11 @@
   <project path="packages/overlays/Themes" name="android_packages_overlays_Themes" remote="everest" />
   <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="everest" />
   <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="everest" />
+  <project path="packages/apps/EmergencyInfo" name="android_packages_apps_EmergencyInfo" groups="pdk-fs" remote="everest" />
+  <project path="packages/apps/Stk" name="android_packages_apps_Stk" groups="apps_stk,pdk-fs" remote="everest" />
+  <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" groups="pdk-cw-fs,pdk-fs" remote="everest" />
+  <project path="packages/modules/common" name="android_packages_modules_common" groups="pdk-cw-fs,pdk-fs" remote="everest" />
+  <project path="packages/services/Telephony" name="android_packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="everest" />
 
   <!-- Packages Extras -->
   <project path="packages/apps/ViMusic" name="packages_apps_ViMusic" remote="everest" />
@@ -124,6 +145,15 @@
   <project path="system/sepolicy" name="android_system_sepolicy" groups="pdk" remote="everest" />
   <project path="system/update_engine" name="android_system_update_engine" groups="pdk" remote="everest" />
   <project path="system/vold" name="android_system_vold" groups="pdk" remote="everest" />
+  <project path="system/bpf" name="android_system_bpf" groups="pdk" remote="everest" />
+  <project path="system/extras" name="android_system_extras" groups="pdk" remote="everest" />
+  <project path="system/keymaster" name="android_system_keymaster" groups="pdk" remote="everest" />
+  <project path="system/media" name="android_system_media" groups="pdk" remote="everest" />
+  <project path="system/security" name="android_system_security" groups="pdk" remote="everest" />
+  <project path="system/tools/mkbootimg" name="android_system_tools_mkbootimg" groups="pdk" remote="everest" />
+  <project path="system/libhidl" name="android_system_libhidl" groups="pdk" remote="everest" />
+  <project path="system/libziparchive" name="android_system_libziparchive" groups="pdk" remote="everest" />
+  <project path="system/logging" name="android_system_logging" groups="pdk" remote="everest" />
 
   <!-- Vendor -->
   <project path="vendor/certification" name="android_vendor_certification" remote="everest-gitea" />
