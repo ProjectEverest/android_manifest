@@ -9,24 +9,49 @@ Prior to building, you will need basic knowledge of [Git](https://www.atlassian.
 - A computer with at least 16GB RAM running Linux (recommended) or MacOS.
 - Build environment [setup](https://github.com/akhilnarang/scripts).
 
-### Instructions
-1. Run the following commands to sync source
+# Getting Started
+
+### Initialize local repository
 
 ```
 repo init -u https://github.com/ProjectEverest/android_manifest -b udc
 ```
-2. To sync source, enter
+
+### Sync up 
 
 ```
 repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
 ```
 
-3. Once the source is downloaded/synced, prepare your device trees, dependencies and start the build by the following commands
+# Inherit the vendor
+```
+$(call inherit-product, vendor/everest/config/common_full_phone.mk)
+```
+# Build Flags
+```
+# Maintainer name for Everest
+EVEREST_MAINTAINER := "XYZ"
+
+# Adding Blur support
+TARGET_SUPPORTS_BLUR := true
+
+# For UDFPS devices
+EVEREST_UDFPS_ANIMATIONS := true
+
+# Build ViMusic or InnerTune
+TARGET_BUILD_VIMUSIC := true 
+TARGET_BUILD_INNERTUNE := true
+
+# Build lawnchair
+TARGET_USES_LAWNCHAIR := true
+```
+
+# Build
 
 ```
-   source build/envsetup.sh
-   lunch everest_<devicecodename>-user
-   make bacon -j$(nproc --all)
+source build/envsetup.sh
+lunch everest_<devicecodename>-user
+make bacon -j$(nproc --all)
 ```
 
 ### Compilation Help
