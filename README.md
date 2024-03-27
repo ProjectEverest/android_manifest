@@ -1,32 +1,76 @@
-# TheParasiteProject
+# This is ProjectEverest [EverestOS]
 
-## Build Process
+# Build guide
 
-### Sync ###
+Prior to building, you will need basic knowledge of [Git](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet).
 
-```bash
+### Requirements
+- Around 100G disk space.
+- A computer with at least 16GB RAM running Linux (recommended) or MacOS.
+- Build environment [setup](https://github.com/akhilnarang/scripts).
 
-# Initialize local repository
-repo init --depth=1 --no-repo-verify -u https://github.com/TheParasiteProject/manifest -b main -g default,-mips,-darwin,-notdefault
+# Getting Started
 
-# Sync
+### Initialize local repository
+
+```
+repo init -u https://github.com/ProjectEverest/android_manifest -b qpr2-new
+```
+
+### Sync up 
+
+```
 repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
 ```
 
-### Build ###
+# Inherit the vendor
+```
+$(call inherit-product, vendor/everest/config/common_full_phone.mk)
+```
+# Build Flags
+```
+# Maintainer name for Everest
+EVEREST_MAINTAINER := "XYZ"
 
-```bash
+# Adding Blur support
+TARGET_SUPPORTS_BLUR := true
 
-# Set up environment
-$ . build/envsetup.sh
+# For UDFPS devices
+EVEREST_UDFPS_ANIMATIONS := true
 
-# Choose a target
-$ lunch aosp_$device-userdebug
+# Build ViMusic or InnerTune
+TARGET_BUILD_VIMUSIC := true 
+TARGET_BUILD_INNERTUNE := true
 
-# Build the code
-$ mka bacon -jX
+# Build lawnchair
+TARGET_USES_LAWNCHAIR := true
 ```
 
-## Devices
+# Build
 
-- [TheParasiteProject-Devices](https://github.com/TheParasiteProject-Devices)
+```
+. build/envsetup.sh
+```
+```
+lunch everest_<devicecodename>-user
+```
+```
+make bacon -j$(nproc --all)
+```
+
+### Compilation Help
+To get help with build errors, please visit [**Android Building Help**](https://t.me/AndroidBuildingHelp).
+
+## Credits
+
+ * [**LineageOS**](https://github.com/LineageOS)
+ * [**CodeAurora Forum**](https://source.codeaurora.org/quic/la)
+ * [**ArrowOS**](https://github.com/ArrowOS)
+ * [**SuperiorOS**](https://github.com/superioros)
+ * [**Project Awaken**](https://github.com/Project-Awaken)
+ * [**ProtonAOSP**](https://github.com/ProtonAOSP)
+ * [**PixelExperience**](https://github.com/PixelExperience)
+ * [**Syberia Project**](https://github.com/syberia-project)
+ * [**Yet another AOSP project**](https://github.com/Yaap)
+ * [**Pixel OS**](https://github.com/pixelos-aosp)
+ * [**ProjectBlaze**](https://github.com/ProjectBlaze)
