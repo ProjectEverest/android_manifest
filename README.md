@@ -14,7 +14,7 @@ Prior to building, you will need basic knowledge of [Git](https://www.atlassian.
 ### Initialize local repository
 
 ```
-repo init -u https://github.com/ProjectEverest/android_manifest -b qpr2-new
+repo init -u https://github.com/ProjectEverest/android_manifest -b qpr2-test --git-lfs
 ```
 
 ### Sync up 
